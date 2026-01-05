@@ -1,4 +1,4 @@
-<div class="product-card" data-id="{{ product.id }}">
+<div class="product-card" (click)="openModal()" data-id="{{ product.id }}">
     <div class="card-img">
         <img src="{{ product.image }}" alt="{{ product.title }}">
     </div>
@@ -21,7 +21,8 @@
     </div>
 
     <div class="card-footer">
-        <button class="add-to-cart" data-id="{{ product.id }}">
+        <button class="add-to-cart"
+            (click)="addToCart($event)">
             Agregar
         </button>
     </div>

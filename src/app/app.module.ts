@@ -9,7 +9,11 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { CartComponent } from './cart/cart.component';
 import { CartItemComponent } from './cart-item/cart-item.component';
 import { AppRoutingModule } from './app-routing.module';
-import { GlobalModalComponent } from './global-modal/global-modal.component';
+import { ProductModalComponent } from './product-modal/product-modal.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatDialogModule } from '@angular/material/dialog';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +22,15 @@ import { GlobalModalComponent } from './global-modal/global-modal.component';
     ProductListComponent,
     CartComponent,
     CartItemComponent,
-    GlobalModalComponent
+    ProductModalComponent,
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

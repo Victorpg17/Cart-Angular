@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { ApiService } from '../api-service.service';
-import { ProductCardComponent } from '../product-card/product-card.component'; 
+import { ApiService } from '../services/api-service.service';
 
 @Component({
   selector: 'app-product-list',
@@ -13,7 +12,6 @@ export class ProductListComponent {
 
   products: any[] = [];
 
-  selectedProduct: any = null;
   ngOnInit() {
     this.apiService.getData().subscribe((data: any[]) => {
       this.products = data;

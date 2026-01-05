@@ -1,0 +1,26 @@
+<div id="img-product-modal">
+    <img src="{{ data.product.image }}" alt="{{ data.product.title }}">
+</div>
+
+<div id="info-product-modal">
+    <h2>{{ data.product.title }}</h2>
+    <p><strong>Categoría:</strong> {{ data.product.category }}</p>
+    <div class="card-rating">
+        <span class="rate">{{ data.product.rating.rate }}</span>
+        <!-- <div class="stars">
+            ${renderDynamicStars(product.rating.rate)}
+        </div> -->
+        <span class="comments">
+            <i class="ri-feedback-line"></i>
+            {{ data.product.rating.count }}
+        </span>
+    </div>
+
+    <p id="price">Precio: <strong>${{ data.product.price }}</strong></p>
+
+    <p id="description">{{ data.product.description }}</p>
+
+    <button class="add-to-cart" data-id="{{ data.product.id }}">
+        Agregar
+    </button>
+</div>
